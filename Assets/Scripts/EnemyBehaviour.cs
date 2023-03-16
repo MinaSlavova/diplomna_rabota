@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private int damage = 5;
+    [SerializeField] private GameObject[] itemDrops;
     private float attackTime = 0.75f;
     private float timer = 0f;
     private GameObject player;
@@ -35,6 +35,14 @@ public class EnemyBehaviour : MonoBehaviour
                 timer = 0;
                 other.GetComponent<Health>().Damage(damage);
             }            
+        }
+    }
+
+    public void ItemDrop()
+    {
+        for(int i = Random.Range(0, itemDrops.Length); i < itemDrops.Length; i++)
+        {
+            Instantiate(itemDrops[Random.Range(0, itemDrops.Length)], transform.position + new Vector3(0, Random.Range(0f, 1f), 0), Quaternion.identity);
         }
     }
 }

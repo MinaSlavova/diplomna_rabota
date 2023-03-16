@@ -16,6 +16,6 @@ public class HealthDisplay : MonoBehaviour
     void Update()
     {
         Health playerHealth = player.GetComponent<Health>();
-        healthText.text = "HEALTH: " + playerHealth.CurrentHealth;
+        healthText.text = "HEALTH: " + playerHealth.CurrentHealth + "\nLIVES: " + playerHealth.CurrentLives;
     }
 }

@@ -16,6 +16,9 @@ public class PlayerDetection : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        found = false;
+        if (other.tag == "Player")
+        {
+            found = false;
+        }
     }
 }
