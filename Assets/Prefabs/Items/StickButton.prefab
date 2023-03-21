@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2551213457102663104}
   - component: {fileID: 2279422898954955902}
   - component: {fileID: 2826016467331140811}
+  - component: {fileID: 2950086589345348507}
   m_Layer: 5
   m_Name: StickButton
   m_TagString: Untagged
@@ -122,6 +123,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2950086589345348507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536573040096793257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a45522eecbafe647ac79b85f3866790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup: {fileID: 6869890430975803560, guid: dbab4dc3a5a82f44c8c899cc2fef11c4, type: 3}
 --- !u!1 &6150161707545366618
 GameObject:
   m_ObjectHideFlags: 0

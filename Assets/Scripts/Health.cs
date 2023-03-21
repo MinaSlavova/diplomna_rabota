@@ -5,13 +5,23 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
-    public static int MAX_HEALTH = 100;
+    private int MAX_HEALTH = 100;
+    public static int healthUpgradeLevel = 1;
     private int lives = 5;
     private GameObject respawnPoint;
 
     private void Start()
     {
         respawnPoint = GameObject.FindGameObjectWithTag("Respawn");
+    }
+
+    private void Update()
+    {
+        int prevLevel = healthUpgradeLevel;
+        if (healthUpgradeLevel > prevLevel)
+        {
+            MAX_HEALTH += 20;
+        }
     }
 
     public int CurrentHealth
@@ -22,6 +32,11 @@ public class Health : MonoBehaviour
     public int CurrentLives
     {
         get { return lives; }
+    }
+
+    public int GetMAX_HEALTH
+    {
+        get { return MAX_HEALTH; }
     }
 
     public void Damage(int amount)

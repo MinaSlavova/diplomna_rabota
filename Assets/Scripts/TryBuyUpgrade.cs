@@ -32,15 +32,23 @@ public class TryBuyUpgrade : MonoBehaviour
 
             if (upgradeName.Equals("Health"))
             {
-                Health.MAX_HEALTH += 20;
+                Health.healthUpgradeLevel += 1;
             }
             else if (upgradeName.Equals("Speed"))
             {
                 PlayerMovement.moveSpeed += 0.5f;
             }
-            else
+            else if (upgradeName.Equals("Attack"))
             {
-                AttackArea.damage += 1;
+                AttackArea.damageUpgradeLevel += 1;
+            }
+            else if (upgradeName.Equals("Rapier") && PlayerAttack.currentWeapon != 1)
+            {
+                PlayerAttack.currentWeapon = 1;
+            }
+            else if (upgradeName.Equals("Lance") && PlayerAttack.currentWeapon != 2)
+            {
+                PlayerAttack.currentWeapon = 2;
             }
         }
     }

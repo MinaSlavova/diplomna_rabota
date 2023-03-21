@@ -12,6 +12,8 @@ public class UpgradesScreen : MonoBehaviour
     public Sprite healthSprite;
     public Sprite speedSprite;
     public Sprite atkSprite;
+    public Sprite rapierSprite;
+    public Sprite lanceSprite;
 
     private void Awake()
     {
@@ -22,9 +24,11 @@ public class UpgradesScreen : MonoBehaviour
 
     private void Start()
     {
-        CreateUpgradeButton(healthSprite, "Health", 2, 0, 0, 0);
+        CreateUpgradeButton(healthSprite, "Health", 2 , 0, 0, 0);
         CreateUpgradeButton(speedSprite, "Speed", 4, 2, 0, 1);
         CreateUpgradeButton(atkSprite, "Attack", 0, 2, 4, 2);
+        CreateUpgradeButton(rapierSprite, "Rapier", 0, 5, 10, 3);
+        CreateUpgradeButton(lanceSprite, "Lance", 4, 6, 4, 4);
 
         Hide();
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2279422898954955902}
   - component: {fileID: 2826016467331140811}
   - component: {fileID: 1066657848276870258}
+  - component: {fileID: 1048706698070060078}
   m_Layer: 5
   m_Name: AppleButton
   m_TagString: Untagged
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1ef4a33ffe2aa4eb213c617155c68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1048706698070060078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536573040096793257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a45522eecbafe647ac79b85f3866790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup: {fileID: 6869890430975803560, guid: 16ef8c07f66744e4486493d50af75f5d, type: 3}
 --- !u!1 &3164120616955758393
 GameObject:
   m_ObjectHideFlags: 0

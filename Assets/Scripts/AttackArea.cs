@@ -4,11 +4,34 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    public static int damage = 3;
+    private int damage;
+    private int prevLevel;
+    public static int damageUpgradeLevel = 1;
+
+    private void Start()
+    {
+        damage = transform.GetChild(0).GetComponent<WeaponProperties>().damage;
+        Debug.Log("The item dmg is: " + damage);
+        prevLevel = damageUpgradeLevel;
+    }
+
+    private void Update()
+    {
+        if (damageUpgradeLevel > prevLevel)
+        {
+            prevLevel = damageUpgradeLevel;
+            damage = transform.GetChild(0).GetComponent<WeaponProperties>().damage + damageUpgradeLevel - 1;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Health>() != null)
+        if (other.CompareTag("Tree"))
+        {
+            TreeBehaviour tree = other.GetComponent<TreeBehaviour>();
+            tree.ItemHarvest();
+        }
+        else if (other.GetComponent<Health>() != null)
         {
             Health health = other.GetComponent<Health>();
             health.Damage(damage);
