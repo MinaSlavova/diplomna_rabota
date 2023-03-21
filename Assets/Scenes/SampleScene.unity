@@ -887,6 +887,7 @@ MonoBehaviour:
   speedSprite: {fileID: 601872805, guid: 2ba55c5847f73b349aada291822a9329, type: 3}
   atkSprite: {fileID: 840225779, guid: 2ba55c5847f73b349aada291822a9329, type: 3}
   rapierSprite: {fileID: -821945066, guid: 1b8744ce93e12ca47a3be6385f61e2e7, type: 3}
+  lanceSprite: {fileID: 1546724965, guid: 1b8744ce93e12ca47a3be6385f61e2e7, type: 3}
 --- !u!1001 &664234836
 PrefabInstance:
   m_ObjectHideFlags: 0

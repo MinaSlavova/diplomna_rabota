@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  attackTime: 0.25
+  attackTime: 0.75
 --- !u!1 &2927433962519531424
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
-  attackTime: 1
+  attackTime: 0.25
 --- !u!1 &4168221099549826325
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,4 +646,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 6
-  attackTime: 0.15
+  attackTime: 1

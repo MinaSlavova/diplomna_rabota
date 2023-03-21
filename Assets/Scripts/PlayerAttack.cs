@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
             prevWeapon = currentWeapon;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !attacking)
         {
             Attack();
         }
