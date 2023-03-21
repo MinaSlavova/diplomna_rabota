@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 20;
-    [SerializeField] private int MAX_HEALTH = 20;
+    [SerializeField] private int health = 100;
+    public static int MAX_HEALTH = 100;
     private int lives = 5;
     private GameObject respawnPoint;
 
@@ -31,6 +31,18 @@ public class Health : MonoBehaviour
         if(health <= 0)
         {
             Death();
+        }
+    }
+
+    public void Heal(int amount)
+    {
+        if(health < MAX_HEALTH)
+        {
+            health += amount;
+            if(health > MAX_HEALTH)
+            {
+                health = MAX_HEALTH;
+            }
         }
     }
 

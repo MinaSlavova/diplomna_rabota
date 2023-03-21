@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField] private GameObject enemyDetectionRange;
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private int damage = 5;
     [SerializeField] private GameObject[] itemDrops;
-    private float attackTime = 0.75f;
+    [SerializeField] private float attackTime = 0.75f;
     private float timer = 0f;
     private GameObject player;
 
@@ -18,9 +19,18 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Update()
     {
-        if(PlayerDetection.found)
+        float oldPositionX = transform.position.x;
+        if(enemyDetectionRange.GetComponent<PlayerDetection>().found == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            if (transform.position.x < oldPositionX)
+            {
+                gameObject.transform.localScale = new Vector3(-1f, transform.localScale.y);
+            }
+            else if (transform.position.x > oldPositionX)
+            {
+                gameObject.transform.localScale = new Vector3(1f, transform.localScale.y);
+            }
         }
     }
 

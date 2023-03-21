@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {
-    static public bool found = false;
+    public bool found = false;
 
     private void OnTriggerStay(Collider other)
     {

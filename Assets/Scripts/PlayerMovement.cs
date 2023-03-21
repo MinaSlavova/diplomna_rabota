@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
 
-    [SerializeField] private float moveSpeed = 10;
+    public static float moveSpeed = 15;
 
     void Start()
     {
@@ -25,5 +25,6 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(1f, transform.localScale.y);
         }
+        
     }
 }

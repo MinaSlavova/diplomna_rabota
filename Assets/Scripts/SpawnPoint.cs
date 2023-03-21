@@ -5,11 +5,10 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
-    private float repeatTime;
+    [SerializeField] private float repeatTime = 5f;
 
     void Start()
     {
-        repeatTime = Random.Range(5f, 21f);
         InvokeRepeating("Spawn", 5f, repeatTime);
     }
 

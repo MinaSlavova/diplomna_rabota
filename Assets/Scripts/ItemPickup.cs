@@ -14,15 +14,15 @@ public class ItemPickup : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         itemName = gameObject.name;
-        itemQuantity.TryAdd(itemName, 0);
+        itemQuantity.TryAdd(itemName, -1);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("The item name is: " + gameObject.name);
-            if (itemQuantity[itemName] > 0)
+            //Debug.Log("The item name is: " + gameObject.name);
+            if (itemQuantity[itemName] > -1)
             {
                 int count = itemQuantity[itemName];
                 count++;

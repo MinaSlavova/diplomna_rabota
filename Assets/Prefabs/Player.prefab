@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5780550686008039781}
   - component: {fileID: 722084134042980041}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2727284383839400723}
-  m_LocalRotation: {x: 0.21809626, y: 0.07681546, z: -0.27015218, w: 0.9346396}
-  m_LocalPosition: {x: 0.468, y: -0.154, z: 0.027}
-  m_LocalScale: {x: 1.2000761, y: 1.5492105, z: 1.9725115}
+  m_LocalRotation: {x: 0.21809629, y: 0.076815456, z: -0.27015224, w: 0.9346396}
+  m_LocalPosition: {x: 0.46799996, y: -0.15400015, z: 0.026999958}
+  m_LocalScale: {x: 1.2000762, y: 1.5492108, z: 1.9725116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 710171846673160045}
@@ -109,9 +109,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4168221099549826325}
-  m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: -0.164, y: -0.012, z: -0.108}
-  m_LocalScale: {x: 1, y: 0.68318, z: 1}
+  m_LocalRotation: {x: -0.258819, y: 0.0000000027939677, z: 0.000000031432133, w: 0.9659258}
+  m_LocalPosition: {x: -0.16399997, y: -0.01199995, z: -0.10799998}
+  m_LocalScale: {x: 1, y: 0.68317986, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5780550686008039781}
