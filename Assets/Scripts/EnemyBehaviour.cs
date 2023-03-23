@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public int health = 20;
     [SerializeField] private GameObject enemyDetectionRange;
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private int damage = 5;
@@ -54,5 +55,22 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Instantiate(itemDrops[Random.Range(0, itemDrops.Length)], transform.position + new Vector3(0, Random.Range(0f, 1f), 0), Quaternion.identity);
         }
+    }
+
+    public void Damage(int amount)
+    {
+        health -= amount;
+
+        if (health <= 0)
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        ItemDrop();
+        Score.score += 20;
+        Destroy(gameObject);
     }
 }

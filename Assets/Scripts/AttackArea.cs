@@ -31,9 +31,9 @@ public class AttackArea : MonoBehaviour
             TreeBehaviour tree = other.GetComponent<TreeBehaviour>();
             tree.ItemHarvest();
         }
-        else if (other.GetComponent<Health>() != null)
+        else if (other.GetComponent<EnemyBehaviour>() != null)
         {
-            Health health = other.GetComponent<Health>();
+            EnemyBehaviour health = other.GetComponent<EnemyBehaviour>();
             health.Damage(damage);
         }
     }

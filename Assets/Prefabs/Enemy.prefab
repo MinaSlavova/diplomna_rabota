@@ -157,7 +157,6 @@ GameObject:
   - component: {fileID: 3758950959534246874}
   - component: {fileID: 5992258453348884019}
   - component: {fileID: 5022443975947973784}
-  - component: {fileID: 4011218368672621978}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -172,14 +171,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8053627874786297939}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6377152475251027148}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4082113572261450557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -260,7 +259,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75, z: 0.25}
-  m_Center: {x: 0.0029098988, y: -3.6183279e-12, z: -0.004663408}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5022443975947973784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f41a8b2608d994cbc29ad5b7f3812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 20
   enemyDetectionRange: {fileID: 4890199482282158012}
   moveSpeed: 2
   damage: 5
@@ -281,17 +281,3 @@ MonoBehaviour:
   - {fileID: 6869890430975803560, guid: dbab4dc3a5a82f44c8c899cc2fef11c4, type: 3}
   - {fileID: 6869890430975803560, guid: 54ac93dcb23c9444f98b6b636068cd97, type: 3}
   attackTime: 0.75
---- !u!114 &4011218368672621978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053627874786297939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbb69d13243b9442902c8493b370fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  MAX_HEALTH: 20

@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private GameObject deathScreen; 
     [SerializeField] private int health = 100;
     private int MAX_HEALTH = 100;
     public static int healthUpgradeLevel = 1;
-    private int lives = 5;
+    private int lives = 2;
+    private int prevLevel;
     private GameObject respawnPoint;
 
     private void Start()
     {
         respawnPoint = GameObject.FindGameObjectWithTag("Respawn");
+        prevLevel = healthUpgradeLevel;
     }
 
     private void Update()
     {
-        int prevLevel = healthUpgradeLevel;
         if (healthUpgradeLevel > prevLevel)
         {
+            prevLevel = healthUpgradeLevel;
             MAX_HEALTH += 20;
         }
     }
@@ -63,7 +66,7 @@ public class Health : MonoBehaviour
 
     private void Death()
     {
-        if (gameObject.CompareTag("Player") && lives != 0)
+        if (lives != 1)
         {
             gameObject.transform.position = respawnPoint.transform.position;
             health = MAX_HEALTH;
@@ -71,8 +74,9 @@ public class Health : MonoBehaviour
         }
         else
         {
-            GetComponent<EnemyBehaviour>().ItemDrop();
-            Destroy(gameObject);
+            gameObject.GetComponent<ScoreManager>().AddScore(System.DateTime.Now.ToString("MM/dd/yyyy hh:mm tt"), string.Format("{0:00000}", Score.score));
+            deathScreen.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

@@ -13,7 +13,7 @@ public class TreeBehaviour : MonoBehaviour
     private void Start()
     {
         dropChance = Random.Range(1, 100);
-        dropTime = Random.Range(1f, 200f);
+        dropTime = Random.Range(1f, 1000f);
     }
 
     private void Update()
