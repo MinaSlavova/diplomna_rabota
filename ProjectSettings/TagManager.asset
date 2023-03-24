@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Ground
   - Pickup
-  - Tree
+  - Harvestable
+  - Weapon
   layers:
   - Default
   - TransparentFX

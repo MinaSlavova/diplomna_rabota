@@ -14,7 +14,6 @@ public class ItemPickup : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         itemName = gameObject.name;
-        itemQuantity.TryAdd(itemName, 0);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,8 +36,8 @@ public class ItemPickup : MonoBehaviour
                     {
                         inventory.isFull[i] = true;
                         GameObject button = Instantiate(itemButton, inventory.slots[i].transform, false);
+                        ItemPickup.itemQuantity[itemName] = 1;
                         button.GetComponent<ItemRemover>().itemFlag = i;
-                        itemQuantity[itemName] = 1;
                         Destroy(gameObject);
                         break;
                     }

@@ -6,10 +6,11 @@ public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     [SerializeField] private float repeatTime = 5f;
+    [SerializeField] private float startTime = 5f;
 
     void Start()
     {
-        InvokeRepeating("Spawn", 5f, repeatTime);
+        InvokeRepeating("Spawn", startTime, repeatTime);
     }
 
     void Spawn()

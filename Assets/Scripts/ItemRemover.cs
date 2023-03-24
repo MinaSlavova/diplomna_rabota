@@ -8,6 +8,11 @@ public class ItemRemover : MonoBehaviour
     public int itemFlag = 0;
     private Inventory inventory;
 
+    public GameObject GetPickup
+    {
+        get { return pickup; }
+    }
+
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -17,6 +22,11 @@ public class ItemRemover : MonoBehaviour
     {
         if (ItemPickup.itemQuantity[pickup.name + "(Clone)"] == 0)
         {
+            if (pickup.CompareTag("Weapon"))
+            {
+                PlayerAttack.currentWeapon = 0;
+            }
+
             inventory.isFull[itemFlag] = false;
             Destroy(gameObject);
         }

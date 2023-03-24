@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6869890430975803562}
   - component: {fileID: 6869890430975803561}
   - component: {fileID: -5251505578307678505}
-  - component: {fileID: 4211524401371440026}
+  - component: {fileID: 2195363347667188720}
   m_Layer: 0
   m_Name: StickItem
   m_TagString: Pickup
@@ -144,8 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 2536573040096793257, guid: e8197791d247c01489c9f208277d0bf8, type: 3}
-  itemQuantity: 0
---- !u!114 &4211524401371440026
+--- !u!114 &2195363347667188720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,6 +153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6869890430975803560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fac648687fb17d42a536b5b460ba658, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cf41ca3b0f816547b651d9298439d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnTime: 60
