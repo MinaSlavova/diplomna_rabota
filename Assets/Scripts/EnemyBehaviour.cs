@@ -26,26 +26,34 @@ public class EnemyBehaviour : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
             if (transform.position.x < oldPositionX)
             {
-                gameObject.transform.localScale = new Vector3(-1f, transform.localScale.y);
+                transform.rotation = Quaternion.Euler(-30, 180, 0);
             }
             else if (transform.position.x > oldPositionX)
             {
-                gameObject.transform.localScale = new Vector3(1f, transform.localScale.y);
+                transform.rotation = Quaternion.Euler(30, 0, 0);
             }
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Health>().Damage(damage);
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
             timer += Time.deltaTime;
 
             if (timer >= attackTime)
             {
                 timer = 0;
-                other.GetComponent<Health>().Damage(damage);
-            }            
+                collision.gameObject.GetComponent<Health>().Damage(damage);
+            }
         }
     }
 
@@ -53,7 +61,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         for(int i = Random.Range(0, itemDrops.Length); i < itemDrops.Length; i++)
         {
-            Instantiate(itemDrops[Random.Range(0, itemDrops.Length)], transform.position + new Vector3(0, Random.Range(0f, 1f), 0), Quaternion.identity);
+            Instantiate(itemDrops[Random.Range(0, itemDrops.Length)], transform.position + new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), 0), Quaternion.identity);
         }
     }
 

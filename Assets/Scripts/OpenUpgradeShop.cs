@@ -11,6 +11,7 @@ public class OpenUpgradeShop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             upgradesScreen.Show();
+            Time.timeScale = 0.5f;
         }
     }
 
@@ -19,6 +20,7 @@ public class OpenUpgradeShop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             upgradesScreen.Hide();
+            Time.timeScale = 1f;
         }
     }
 }

@@ -7,6 +7,7 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private float repeatTime = 5f;
     [SerializeField] private float startTime = 5f;
+    [SerializeField] private float yAxis = 0.5f;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class SpawnPoint : MonoBehaviour
 
     void Spawn()
     {
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 21), 1, Random.Range(-20, 21));
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 21), yAxis, Random.Range(-20, 21));
         Instantiate(prefab, randomSpawnPosition, Quaternion.identity);
     }
 }

@@ -10,7 +10,15 @@ public class AttackArea : MonoBehaviour
 
     private void Start()
     {
-        damage = transform.GetComponentInParent<WeaponProperties>().damage;
+        if(transform.GetComponentInParent<WeaponProperties>() == null)
+        {
+            damage = transform.GetComponentInParent<ProjectileProperties>().damage;
+        }
+        else
+        {
+            damage = transform.GetComponentInParent<WeaponProperties>().damage;
+        }
+
         Debug.Log("The item dmg is: " + damage);
         prevLevel = damageUpgradeLevel;
     }
@@ -20,16 +28,28 @@ public class AttackArea : MonoBehaviour
         if (damageUpgradeLevel > prevLevel)
         {
             prevLevel = damageUpgradeLevel;
-            damage = transform.GetComponentInParent<WeaponProperties>().damage + damageUpgradeLevel;
+            if (transform.GetComponentInParent<WeaponProperties>() == null)
+            {
+                damage = transform.GetComponentInParent<ProjectileProperties>().damage + damageUpgradeLevel;
+            }
+            else
+            {
+                damage = transform.GetComponentInParent<WeaponProperties>().damage + damageUpgradeLevel;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Harvestable") )
+        if (other.CompareTag("Harvestable"))
         {
             HarvestObject harvestable = other.GetComponent<HarvestObject>();
             harvestable.ItemHarvest();
+        }
+        else if (other.CompareTag("Boss"))
+        {
+            BossEnemyBehaviour health = other.GetComponent<BossEnemyBehaviour>();
+            health.Damage(damage);
         }
         else if (other.GetComponent<EnemyBehaviour>() != null)
         {

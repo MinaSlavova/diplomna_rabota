@@ -125,7 +125,7 @@ TextureImporter:
         width: 399
         height: 460
       alignment: 9
-      pivot: {x: 0.0545761, y: 0.14280157}
+      pivot: {x: 0.09213486, y: 0.17210746}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 908
         height: 251
       alignment: 9
-      pivot: {x: 0.13254188, y: 0.52003896}
+      pivot: {x: 0.14154583, y: 0.5158137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
         width: 932
         height: 264
       alignment: 9
-      pivot: {x: 0.0808393, y: 0.49364865}
+      pivot: {x: 0.13374107, y: 0.515035}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,6 +217,48 @@ TextureImporter:
       bones: []
       spriteID: 25f56990d99802940b690fd6adc5bde6
       internalID: 1546724965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1714
+        width: 940
+        height: 375
+      alignment: 9
+      pivot: {x: 0.22130974, y: 0.5317539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a995158570be1841806c038c03b3714
+      internalID: 1032822369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1783
+        width: 268
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa7403b53c8a944ba887672fc205053
+      internalID: 551691717
       vertices: []
       indices: 
       edges: []
@@ -233,6 +275,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Weapons_0: 599477634
+      Weapons_6: 551691717
+      Weapons_5: 1032822369
       Weapons_1: -821945066
       Weapons_4: 1546724965
       Weapons_2: -137890031

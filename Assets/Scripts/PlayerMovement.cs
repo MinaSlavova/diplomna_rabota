@@ -25,21 +25,12 @@ public class PlayerMovement : MonoBehaviour
         
         if (direction.x < 0)
         {
-            gameObject.transform.localScale = new Vector3(-1f, transform.localScale.y);
+            transform.rotation = Quaternion.Euler(-30, 180, 0);
         }
         else if (direction.x > 0)
         {
-            gameObject.transform.localScale = new Vector3(1f, transform.localScale.y);
+            transform.rotation = Quaternion.Euler(30, 0, 0);
         }
-
-        /*if(Input.GetAxis("Horizontal") < 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1f, transform.localScale.y);
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1f, transform.localScale.y);
-        }*/
 
     }
 }

@@ -9,6 +9,7 @@ public class TryBuyUpgrade : MonoBehaviour
     private Inventory inventory;
     [SerializeField] private GameObject rapierButton;
     [SerializeField] private GameObject lanceButton;
+    [SerializeField] private GameObject bowButton;
 
     private void Start()
     {
@@ -44,6 +45,10 @@ public class TryBuyUpgrade : MonoBehaviour
         else if (upgradeName.Equals("Lance") && ItemPickup.itemQuantity["Lance(Clone)"] != 1)
         {
             InventoryCheck("Lance(Clone)", lanceButton, upgradeCostA, upgradeCostS, upgradeCostR);
+        }
+        else if (upgradeName.Equals("Bow") && ItemPickup.itemQuantity["Bow(Clone)"] != 1)
+        {
+            InventoryCheck("Bow(Clone)", bowButton, upgradeCostA, upgradeCostS, upgradeCostR);
         }
     }
 

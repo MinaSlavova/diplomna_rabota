@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - Harvestable
   - Weapon
+  - Boss
   layers:
   - Default
   - TransparentFX

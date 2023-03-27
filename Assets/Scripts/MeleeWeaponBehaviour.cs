@@ -19,7 +19,6 @@ public class MeleeWeaponBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !attacking)
         {
-
             Attack();
         }
 
