@@ -12,11 +12,11 @@ public class AttackArea : MonoBehaviour
     {
         if(transform.GetComponentInParent<WeaponProperties>() == null)
         {
-            damage = transform.GetComponentInParent<ProjectileProperties>().damage;
+            damage = transform.GetComponentInParent<ProjectileProperties>().damage + damageUpgradeLevel/2;
         }
         else
         {
-            damage = transform.GetComponentInParent<WeaponProperties>().damage;
+            damage = transform.GetComponentInParent<WeaponProperties>().damage + damageUpgradeLevel;
         }
 
         Debug.Log("The item dmg is: " + damage);
@@ -30,7 +30,7 @@ public class AttackArea : MonoBehaviour
             prevLevel = damageUpgradeLevel;
             if (transform.GetComponentInParent<WeaponProperties>() == null)
             {
-                damage = transform.GetComponentInParent<ProjectileProperties>().damage + damageUpgradeLevel;
+                damage = transform.GetComponentInParent<ProjectileProperties>().damage + damageUpgradeLevel/2;
             }
             else
             {

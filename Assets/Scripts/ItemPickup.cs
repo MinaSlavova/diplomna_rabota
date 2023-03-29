@@ -20,7 +20,6 @@ public class ItemPickup : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("The item name is: " + gameObject.name);
             if (itemQuantity[itemName] > 0)
             {
                 int count = itemQuantity[itemName];

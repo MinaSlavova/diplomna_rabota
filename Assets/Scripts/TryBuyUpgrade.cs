@@ -32,7 +32,7 @@ public class TryBuyUpgrade : MonoBehaviour
         }
         else if (upgradeName.Equals("Speed") && DeductCost(upgradeCostA, upgradeCostS, upgradeCostR) == true)
         {
-            PlayerMovement.moveSpeed += 0.5f;
+            PlayerMovement.moveSpeedUpgradeLevel += 1;
         }
         else if (upgradeName.Equals("Attack") && DeductCost(upgradeCostA, upgradeCostS, upgradeCostR) == true)
         {

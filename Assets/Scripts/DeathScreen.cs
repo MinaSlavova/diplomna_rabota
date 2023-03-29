@@ -9,13 +9,21 @@ public class DeathScreen : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
-        Score.score = 0;
+        ResetStatic();
     }
 
     public void Home()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Time.timeScale = 1f;
+        ResetStatic();
+    }
+
+    private void ResetStatic()
+    {
+        PlayerMovement.moveSpeedUpgradeLevel = 0;
+        Health.healthUpgradeLevel = 0;
+        AttackArea.damageUpgradeLevel = 0;
         Score.score = 0;
     }
 }

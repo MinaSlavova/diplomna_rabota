@@ -97,6 +97,8 @@ MonoBehaviour:
   - {fileID: 6869890430975803560, guid: 53d2821062ed7e44aaab07523a48dd70, type: 3}
   - {fileID: 6869890430975803560, guid: 125db0b1010aadc4f8e2856959084d71, type: 3}
   - {fileID: 6869890430975803560, guid: ea4f4f0d51342eb4ea2c958676ffed0f, type: 3}
+  - {fileID: 6869890430975803560, guid: 06803add608268c418b167d469a473a7, type: 3}
+  - {fileID: 6869890430975803560, guid: 2b5d066abed90b44f93344b062787367, type: 3}
 --- !u!1 &3926765531903083482
 GameObject:
   m_ObjectHideFlags: 0
