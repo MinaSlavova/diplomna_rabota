@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public static int moveSpeedUpgradeLevel = 0;
     private int prevLevel;
-    private float moveSpeed = 3;
+    private float moveSpeed = 2f;
     public Camera mainCamera;
 
     void Start()
@@ -21,11 +21,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if(moveSpeedUpgradeLevel > prevLevel)
         {
-            moveSpeed += 0.5f;
+            moveSpeed += 0.25f;
+            prevLevel = moveSpeedUpgradeLevel;
         }
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed);
+        rb.MovePosition(transform.position + move * moveSpeed * Time.fixedDeltaTime);
 
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
